@@ -1,3 +1,3 @@
-function testit(){
-  alert("test");  
+if(jQuery){
+  alert("test!");  
 }
