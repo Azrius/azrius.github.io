@@ -1,3 +1,3 @@
-if(jQuery){
-  alert("test!");  
-}
+$("#menu_button").click(function(){
+  alert("test!");
+});
