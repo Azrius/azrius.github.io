@@ -7,7 +7,7 @@ function init(){
         open_menu();
     });
     
-    document.requestFullscreen();
+    document.body.requestFullscreen();
 }
 
 $(document).ready(function(){
