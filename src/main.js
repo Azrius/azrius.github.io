@@ -14,7 +14,7 @@ function mouse_cursor(){
     $(document).mousemove(function(e){
        $("#cursor").css("position","absolute");
        
-       $("#cursor").css('left', e.clientX - 20).css('top', e.clientY + 7);
+       $("#cursor").css('left', e.clientX - 2).css('top', e.clientY - 2);
     });
 }
 
