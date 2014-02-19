@@ -7,7 +7,7 @@ function init(){
         open_menu();
     });
     
-    document.body.requestFullscreen();
+    document.getElementById("men_button").webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
 }
 
 $(document).ready(function(){
