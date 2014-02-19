@@ -12,7 +12,7 @@ function init(){
 
 function mouse_cursor(){
     $(document).mousemove(function(e){
-       alert(e.clientX); 
+       $('#cursor').css('left', e.clientX - 20).css('top', e.clientY + 7);
     });
 }
 
