@@ -12,6 +12,7 @@ function init(){
 
 function mouse_cursor(){
     $(document).mousemove(function(e){
+       $("#cursor").position("absolute");
        $("#cursor").css("left", e.clientX + "px");
     });
 }
