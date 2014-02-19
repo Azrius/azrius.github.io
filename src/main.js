@@ -1,5 +1,13 @@
-$(document).ready(function(){
+function open_menu(){
+    
+}
+
+function init(){
   $("#menu_button").click(function(){
-    alert("test!");
-  });
+    open_menu();
+  });  
+}
+
+$(document).ready(function(){
+  init();
 });
