@@ -6,13 +6,11 @@ function init(){
     $("#menu_button").click(function(){
         open_menu();
     });
-    
-    document.getElementById("menu_button").webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
 }
 
 $(document).ready(function(){
     init();
-    webkitRequestFullScreen();
+    alert(httpGet("http://example.com/"));
 });
 
 function httpGet(theUrl)
@@ -25,4 +23,3 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-alert(httpGet("http://example.com/"));
