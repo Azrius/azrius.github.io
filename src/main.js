@@ -22,7 +22,8 @@ function update_stats(){
 }
 
 function tick(){
-  
+  update_resources();
+  update_stats();
 }
 
 function init(){
