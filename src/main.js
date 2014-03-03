@@ -5,5 +5,3 @@ function tick(){
 function init(){
     setInterval(tick(), 100);
 }
-
-$(document).ready(init());
