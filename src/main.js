@@ -3,6 +3,5 @@ function tick(){
 }
 
 function init(){
-    
+    setInterval(tick, 100);    
 }
-setInterval(tick(), 100);
