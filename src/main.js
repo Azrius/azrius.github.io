@@ -14,7 +14,7 @@ resources = {
 function update_resources(){
   var resource_panel = document.getElementById("resources");
   
-  resource_panel.innerHTML = "Crude oil: " + resources.crude_oil;
+  resource_panel.innerHTML = "Crude oil: " + resources.crude_oil + "<br />" + "Lumber: " + resources.lumber;
 }
 
 function update_stats(){
