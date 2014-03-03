@@ -5,7 +5,7 @@ resources = {
 }
 
 function tick(){
-  alert(resources.lumber);
+  
 }
 
 function init(){
