@@ -1,1 +1,1 @@
-Homepage
+Poorly written Communism simulator
