@@ -1,5 +1,5 @@
 function tick(){
-    alert("test");    
+        
 }
 
 function init(){
