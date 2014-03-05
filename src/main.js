@@ -16,7 +16,7 @@ function update_resources(){
   var stats_panel = document.getElementById("stats");
   
   resource_panel.innerHTML = "Crude oil: " + resources.crude_oil + "<br />" + "Lumber: " + resources.lumber;
-  stats_panel.innerHTML = "Citizens: " + stats.citizens + "<br />" + "Lumberjacks: " + "<br />" + "Oilriggers: " + stats.oilriggers + "<br />" + "Steelworkers" + stats.steelworkers;
+  stats_panel.innerHTML = "Citizens: " + stats.citizens + "<br />" + "Lumberjacks: " + stats.lumberjacks + "<br />" + "Oilriggers: " + stats.oilriggers + "<br />" + "Steelworkers: " + stats.steelworkers;
 }
 
 function update_stats(){
