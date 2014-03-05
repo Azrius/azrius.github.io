@@ -15,9 +15,9 @@ function update_resources(){
   var resource_panel = document.getElementById("resources");
   var stats_panel = document.getElementById("stats");
   
-  resources.crude_oil += stats.oilriggers * 0.5;
-  resources.lumber += stats.lumberjacks * 0.25;
-  resources.steel += stats.steelworkers * 0.75;
+  resources.crude_oil += stats.oilriggers * 2;
+  resources.lumber += stats.lumberjacks * 3;
+  resources.steel += stats.steelworkers;
   
   resources.crude_oil = Math.ceil(resources.crude_oil);
   resources.lumber = Math.ceil(resources.lumber);
