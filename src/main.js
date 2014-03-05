@@ -1,8 +1,8 @@
 stats = {
   citizens: 100,
-  lumberjacks: 2,
-  oilriggers: 2,
-  steelworkers: 2,
+  lumberjacks: 1,
+  oilriggers: 1,
+  steelworkers: 1,
 };
 
 resources = {
@@ -15,11 +15,11 @@ function update_resources(){
   var resource_panel = document.getElementById("resources");
   var stats_panel = document.getElementById("stats");
   
-  resources.crude_oil += stats.oilriggers/3;
-  resources.lumber += stats.lumberjacks/2;
-  resources.steel += stats.steelworkers/4;
+  resources.crude_oil += stats.oilriggers;
+  resources.lumber += stats.lumberjacks;
+  resources.steel += stats.steelworkers;
   
-  resource_panel.innerHTML = "Crude oil: " + math.floor(resources.crude_oil) + "<br />" + "Lumber: " + math.floor(resources.lumber) + "<br />" + "Steel: " + math.floor(resources.steel);
+  resource_panel.innerHTML = "Crude oil: " + resources.crude_oil + "<br />" + "Lumber: " + resources.lumber + "<br />" + "Steel: " + resources.steel;
   stats_panel.innerHTML = "Citizens: " + stats.citizens + "<br />" + "Lumberjacks: " + stats.lumberjacks + "<br />" + "Oilriggers: " + stats.oilriggers + "<br />" + "Steelworkers: " + stats.steelworkers;
 }
 
