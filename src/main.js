@@ -19,9 +19,9 @@ function update_resources(){
   resources.lumber += stats.lumberjacks * 0.25;
   resources.steel += stats.steelworkers * 0.75;
   
-  resources.crude_oil = Math.floor(resources.crude_oil);
-  resources.lumber = Math.floor(resources.lumber);
-  resources.steel = Math.floor(resources.steel);
+  resources.crude_oil = Math.ceil(resources.crude_oil);
+  resources.lumber = Math.ceil(resources.lumber);
+  resources.steel = Math.ceil(resources.steel);
   
   resource_panel.innerHTML = "Crude oil: " + resources.crude_oil + "<br />" + "Lumber: " + resources.lumber + "<br />" + "Steel: " + resources.steel;
   stats_panel.innerHTML = "Citizens: " + stats.citizens + "<br />" + "Lumberjacks: " + stats.lumberjacks + "<br />" + "Oilriggers: " + stats.oilriggers + "<br />" + "Steelworkers: " + stats.steelworkers;
