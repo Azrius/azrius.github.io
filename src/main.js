@@ -19,7 +19,7 @@ function update_resources(){
   resources.lumber += stats.lumberjacks/2;
   resources.steel += stats.steelworkers/4;
   
-  resource_panel.innerHTML = "Crude oil: " + resources.crude_oil + "<br />" + "Lumber: " + resources.lumber + "<br />" + "Steel: " + resources.steel;
+  resource_panel.innerHTML = "Crude oil: " + math.floor(resources.crude_oil) + "<br />" + "Lumber: " + math.floor(resources.lumber) + "<br />" + "Steel: " + math.floor(resources.steel);
   stats_panel.innerHTML = "Citizens: " + stats.citizens + "<br />" + "Lumberjacks: " + stats.lumberjacks + "<br />" + "Oilriggers: " + stats.oilriggers + "<br />" + "Steelworkers: " + stats.steelworkers;
 }
 
