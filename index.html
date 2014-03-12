@@ -5,11 +5,11 @@
       enchant();
       var game = new Core(320, 320);
       
-      game.preload('http://oi58.tinypic.com/34guer9.jpg'); // preload image
+      game.preload('http://oi58.tinypic.com/34guer9.jpg');
       game.fps = 60;
 
       game.onload = function(){
-        var bear = new Sprite(32, 32);
+        var bear = new Sprite(16, 16);
         bear.image = game.assets['http://oi58.tinypic.com/34guer9.jpg'];
         game.rootScene.addChild(bear);
         
