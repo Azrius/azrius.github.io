@@ -3,23 +3,16 @@
   <body style="margin: 0; padding: 0;">
     <script>
       enchant();
-      var game = new Core(320, 320);
       
-      game.preload('http://oi58.tinypic.com/34guer9.jpg');
-      game.fps = 60;
-
-      game.onload = function(){
-        var bear = new Sprite(16, 16);
-        bear.image = game.assets['http://oi58.tinypic.com/34guer9.jpg'];
+      Player = Class.create(Sprite, {
+        initialize: function(){
+          
+        },
         
-        game.rootScene.addChild(bear);
-      }
-      
-      if(game.input.right){
-        bear.x += 1;
-      }
-      
-      game.start();
+        onenterframe: function(){
+          
+        }
+      });
     </script>
   </body>
 </html>
