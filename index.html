@@ -11,9 +11,12 @@
       game.onload = function(){
         var bear = new Sprite(16, 16);
         bear.image = game.assets['http://oi58.tinypic.com/34guer9.jpg'];
-        bear.x = 100;
         
         game.rootScene.addChild(bear);
+      }
+      
+      if(game.input.right){
+        bear.x += 1;
       }
       
       game.start();
