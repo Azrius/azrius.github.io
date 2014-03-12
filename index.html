@@ -6,22 +6,21 @@
       var game = new Core(320, 320);
       
       game.preload('http://oi58.tinypic.com/34guer9.jpg'); // preload image
-    game.fps = 20;
+      game.fps = 60;
 
-    game.onload = function(){
+      game.onload = function(){
         var bear = new Sprite(32, 32);
         bear.image = game.assets['http://oi58.tinypic.com/34guer9.jpg'];
         game.rootScene.addChild(bear);
-        bear.frame = [6, 6, 7, 7];   // select sprite frame
         
-        bear.tl.moveBy(288, 0, 90)   // move right
-            .scaleTo(-1, 1, 10)      // turn left
-            .moveBy(-288, 0, 90)     // move left
-            .scaleTo(1, 1, 10)       // turn right
-            .loop();                 // loop it
-    };
+        bear.tl.moveBy(288, 0, 90)
+            .scaleTo(-1, 1, 10) 
+            .moveBy(-288, 0, 90) 
+            .scaleTo(1, 1, 10)
+            .loop();
+      };
 
-    game.start(); // start your game!
+    game.start();
     </script>
   </body>
 </html>
