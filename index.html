@@ -6,7 +6,9 @@
       
       Player = Class.create(Sprite, {
         initialize: function(){
-          
+          this.image = game.assets("http://oi59.tinypic.com/e9yv10.jpg");
+          this.x = 320/2;
+          this.y = 320/2;
         },
         
         onenterframe: function(){
@@ -16,12 +18,15 @@
       
       window.onload = function(){
         game = new Game(320, 320);
-        game.preload("http://oi58.tinypic.com/29eoj6v.jpg");
+        game.preload("http://oi58.tinypic.com/29eoj6v.jpg", "http://oi59.tinypic.com/e9yv10.jpg");
         
         game.onload = function(){
           bg = new Sprite(320, 320);
           bg.image = game.assets["http://oi58.tinypic.com/29eoj6v.jpg"];
           game.rootScene.addChild(bg);
+          
+          player = new Player();
+          game.rootScene.addChild(player);
         }
         
         game.start();
