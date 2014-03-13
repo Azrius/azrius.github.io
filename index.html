@@ -13,7 +13,9 @@
         },
         
         onenterframe: function(){
-          
+          if(game.input.down){
+            this.x -= 1;
+          }
         }
       });
       
