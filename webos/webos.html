@@ -25,7 +25,7 @@
 					m: clock.getMinutes(),
 				}
 				
-				document.getElementById("taskbar").innerHTML = timeValues.h + ": " + timeValues.m;	
+				document.getElementById("taskbar").innerHTML = "<p style='position: absolute; left: 95%;>" + timeValues.h + ": " + timeValues.m + "</p>";
 			}, 500)
 			
 			function Window(contents, title){
@@ -82,6 +82,6 @@
 	</head>
 	
 	<body>
-		<div id="taskbar" style="left: 95%; width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"></div>
+		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"></div>
 	</body>
 </html>
