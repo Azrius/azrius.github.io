@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #6A3D38;
+				color: #998F7C;
+				font-family: Euphemia;
+				font-size: 9px;
+			}
+		</style>
+		
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		
+		<script>
+			var RAM = {
+				terminalLine: 0,
+			};
+			var SSD = {};
+			var terminalCommands = {};
+		
+			function Window(contents, title){
+				document.body.innerHTML += "<div id='" + title + "' class='window'></div>";
+				$("#" + title).css("background-color", "#201F1D");
+				$("#" + title).css("display", "inline-block");
+				$("#" + title).css("border-style", "solid");
+				$("#" + title).css("border-width", "4px");
+				$("#" + title).css("border-color", "#A73E28");
+				
+				var closeFunc = "$(\"#" + title + "\").remove()";
+				var closeButton = "<span onclick='" + closeFunc + "' style='color: #EDDEC9; font-size: 16px; background-color: #A73E28; cursor: pointer;'>[+]</span>";
+				var titleBar = "<span style='color: #EDDEC9; font-size: 16px; background-color: #A73E28;'> - " + title + " - </span><br />";
+				
+				document.getElementById(title).innerHTML += closeButton;
+				document.getElementById(title).innerHTML += titleBar;
+				document.getElementById(title).innerHTML += contents;
+			}
+			
+			function terminalPrint(text){
+				RAM.terminalLine += 1;
+				document.getElementById("output").innerHTML += ": " + text + "<br />";
+			}
+			
+			function emulateCommand(command){
+				if(RAM.terminalLine >= 14){
+					document.getElementById("output").innerHTML = "";
+				}
+			
+				if(command == "test"){
+					terminalPrint("hello, world");
+				} else {
+					terminalPrint("ERROR[0]: " + command + " - Unknown command.");
+				}
+				
+				document.getElementById("expression").value = "";
+			}
+			
+			$(document).keypress(function(event){
+				if(event.which == 13){
+					emulateCommand(document.getElementById("expression").value);
+				}
+			});
+			
+			$(document).ready(function(){
+				$("body").css("overflow", "hidden");
+				
+				calculatorSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
+				calculatorSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
+				
+				var calculatorWindow = new Window(calculatorSource, "terminal");
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div style="width: 102%; height: 20px; margin-left: -7px; margin-top: -7px; margin-bottom: 10px; background-color: #1A1917; color: #1A1917;">.</div>
+	</body>
+</html>
