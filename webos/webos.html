@@ -46,6 +46,13 @@
 				document.getElementById(title).innerHTML += contents;
 			}
 			
+			function startTerminal(){
+				terminalSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
+				terminalSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
+				
+				var terminalWindow = new Window(terminalSource, "terminal");
+			}
+			
 			function terminalPrint(text){
 				RAM.terminalLine += 1;
 				document.getElementById("output").innerHTML += ": " + text + "<br />";
@@ -74,10 +81,7 @@
 			$(document).ready(function(){
 				$("body").css("overflow", "hidden");
 				
-				calculatorSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
-				calculatorSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
-				
-				var calculatorWindow = new Window(calculatorSource, "terminal");
+				startTerminal();
 			});
 		</script>
 	</head>
