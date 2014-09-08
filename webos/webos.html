@@ -25,8 +25,8 @@
 					m: clock.getMinutes(),
 				}
 				
-				document.getElementById("taskbar").innerHTML = "<p style='position: absolute; left: 95%;>" + timeValues.h + ": " + timeValues.m + "</p>";
-			}, 500)
+				document.getElementById("taskbar").innerHTML = "<p style='position: absolute;>" + timeValues.h + ": " + timeValues.m + "</p>";
+			}, 500);
 			
 			function Window(contents, title){
 				document.body.innerHTML += "<div id='" + title + "' class='window'></div>";
