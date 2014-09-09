@@ -31,8 +31,7 @@
 					m: clock.getMinutes(),
 				}
 				
-				//document.body.innerHTML = document.body.innerHTML;
-				document.getElementById("taskbar").innerHTML += "<p style='position: absolute; left: 95%; top: -1%;'>" + timeValues.h + ": " + timeValues.m + "</p>";
+				document.getElementById("clock").innerHTML = timeValues.h + ": " + timeValues.m;
 			}, 500);
 			
 			function Window(contents, title){
@@ -67,6 +66,10 @@
 				
 			}
 			
+			function initClock(){
+				document.getElementById("taskbar").innerHTML += "<p id='clock' style='position: absolute; left: 95%; top: -1%;'>" + timeValues.h + ": " + timeValues.m + "</p>";
+			}
+			
 			function terminalPrint(text){
 				RAM.terminalLine += 1;
 				document.getElementById("output").innerHTML += ": " + text + "<br />";
@@ -94,6 +97,7 @@
 			
 			$(document).ready(function(){
 				$("body").css("overflow", "hidden");
+				initClock();
 			});
 		</script>
 	</head>
