@@ -75,6 +75,10 @@
 				RAM.windowID += 1;
 			}
 			
+			function startBrowser(){
+				browserSource = "<input id='url' style='width: 600px;' />";
+			}
+			
 			function initClock(){
 				document.body.innerHTML += "<p id='clock' style='position: absolute; left: 95%; top: -1%;'></p>";
 			}
@@ -115,6 +119,6 @@
 	</head>
 	
 	<body>
-		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"><span>Apps - </span><span class="taskbar-button" onclick="startCalculator()">[c]</span><span class="taskbar-button" onclick="startTerminal()" id="terminalButton">[t]</span></div>
+		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"><span>Apps - </span><span class="taskbar-button" onclick="startCalculator()">[c]</span><span class="taskbar-button" onclick="startTerminal()" id="terminalButton">[t]</span><span class="taskbar-button" onclick="startBrowser()">[w]</span></div>
 	</body>
 </html>
