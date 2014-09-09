@@ -47,8 +47,7 @@
 				
 				var closeFunc = "$(\"#" + title + "\").remove()";
 				var closeButton = "<span onclick='" + closeFunc + "' style='color: #EDDEC9; font-size: 16px; background-color: #A73E28; cursor: pointer;'>[+]</span>";
-				var titleBar = "<span style='color: #EDDEC9; font-size: 16px; background-color: #A73E28;'> - " + title + " - </span><br />";
-				titleBar = titleBar.replace(/[0-9]/, "");
+				var titleBar = "<span style='color: #EDDEC9; font-size: 16px; background-color: #A73E28;'> - " + title.replace(/[0-9]/, "") + " - </span><br />";
 				
 				document.getElementById(title).innerHTML += closeButton;
 				document.getElementById(title).innerHTML += titleBar;
