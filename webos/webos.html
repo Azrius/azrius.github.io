@@ -28,8 +28,9 @@
 			var terminalCommands = ["test"];
 			
 			var calculatorFunctions = {
+				expression: document.getElementById("calculator_expression").value.replace(/^[a-zA-Z]*$/, ""),
 				evaluate_expression: function(){
-					document.getElementById("calculator_output").innerHTML = eval(document.getElementById("calculator_expression").value.replace(/^[a-zA-Z]*$/, ""));
+					document.getElementById("calculator_output").innerHTML = eval(calculatorFunction.expression));
 				},
 			}
 			
