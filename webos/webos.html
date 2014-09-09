@@ -38,9 +38,6 @@
 			}, 500);
 			
 			function Window(contents, title){
-				this.title = title;
-				alert(this.title);
-				
 				document.body.innerHTML += "<div id='" + title + "' class='window'></div>";
 				$("#" + title).css("background-color", "#201F1D");
 				$("#" + title).css("display", "inline-block");
@@ -51,6 +48,7 @@
 				var closeFunc = "$(\"#" + title + "\").remove()";
 				var closeButton = "<span onclick='" + closeFunc + "' style='color: #EDDEC9; font-size: 16px; background-color: #A73E28; cursor: pointer;'>[+]</span>";
 				var titleBar = "<span style='color: #EDDEC9; font-size: 16px; background-color: #A73E28;'> - " + title + " - </span><br />";
+				titleBar = titleBar.replace("/[0-9/]", "");
 				
 				document.getElementById(title).innerHTML += closeButton;
 				document.getElementById(title).innerHTML += titleBar;
