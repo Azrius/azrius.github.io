@@ -19,18 +19,6 @@
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		
 		<script>
-			var calculator = {
-				expression: "",
-				output: ""
-				eval_expression: function(){
-					alert(eval(calculator.expression));
-				}
-			};
-			
-			calculator.expression = document.getElementById("calculator_expression").value;
-		</script>
-		
-		<script>
 			var RAM = {
 				terminalLine: 0,
 				terminalOpen: 0,
@@ -73,9 +61,13 @@
 					RAM.windowID += 1;
 			}
 			
+			function evaluate_expression(){
+				alert(document.getElementById("calculator_expression").value);
+			}
+			
 			function startCalculator(){
 				calculatorSource = "<input id='calculator_expression' />";
-				calculatorSource += "<button id='calculator_submit' onclick='calculator.eval_expression()'>=</button>";
+				calculatorSource += "<button id='calculator_submit' onclick='evaluate_expression()'>=</button>";
 				calculatorSource += "<div id='calculator_output'></div>";
 				var calculatorWindow = new Window(calculatorSource, "calculator" + RAM.windowID);
 				RAM.windowID += 1;
