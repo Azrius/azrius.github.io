@@ -48,10 +48,14 @@
 			}
 			
 			function startTerminal(){
-				terminalSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
-				terminalSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
+				if(!document.getElementById("terminal")){
+					terminalSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
+					terminalSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
 				
-				var terminalWindow = new Window(terminalSource, "terminal");
+					var terminalWindow = new Window(terminalSource, "terminal");
+				} else {
+					return 0;
+				}
 			}
 			
 			function terminalPrint(text){
