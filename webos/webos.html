@@ -58,6 +58,10 @@
 				}
 			}
 			
+			function startCalculator(){
+				
+			}
+			
 			function terminalPrint(text){
 				RAM.terminalLine += 1;
 				document.getElementById("output").innerHTML += ": " + text + "<br />";
@@ -90,6 +94,6 @@
 	</head>
 	
 	<body>
-		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"><span>Apps - </span><span onclick="startTerminal()" id="terminalButton">[t]</span></div>
+		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"><span>Apps - </span><span onclick="startCalculator">[c]</span><span onclick="startTerminal()" id="terminalButton">[t]</span></div>
 	</body>
 </html>
