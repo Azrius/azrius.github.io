@@ -29,7 +29,7 @@
 			
 			var calculatorFunctions = {
 				evaluate_expression: function(){
-					alert(eval(document.getElementById("calculator_expression").value))	
+					document.getElementById("calculator_output").innerHTML = eval(document.getElementById("calculator_expression").value));
 				},
 			}
 			
