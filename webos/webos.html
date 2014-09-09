@@ -38,6 +38,9 @@
 			}, 500);
 			
 			function Window(contents, title){
+				this.title = title;
+				alert(this.title);
+				
 				document.body.innerHTML += "<div id='" + title + "' class='window'></div>";
 				$("#" + title).css("background-color", "#201F1D");
 				$("#" + title).css("display", "inline-block");
