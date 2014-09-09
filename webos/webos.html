@@ -11,6 +11,8 @@
 			.taskbar-button {
 				font-size: 12px;
 				cursor: hand;
+				margin-left: 5px;
+				margin-right: 5px;
 			}
 		</style>
 		
@@ -63,12 +65,13 @@
 			}
 			
 			function startCalculator(){
-				
+				var calculatorSource = "<input id='calculator_expression' />";
+				calculatorSource += "<button id='submit' onclick='calculator_evaluate()'>=</button>";
+				var calculatorWindow = new Window(calculatorSource, "calculator");
 			}
 			
 			function initClock(){
-				alert("clock intialized");
-				document.body.innerHTML += "<p id='clock' style='position: absolute; left: 95%; top: -1%;'>test</p>";
+				document.body.innerHTML += "<p id='clock' style='position: absolute; left: 95%; top: -1%;'></p>";
 			}
 			
 			function terminalPrint(text){
