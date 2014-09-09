@@ -28,7 +28,9 @@
 			var terminalCommands = {};
 			
 			var calculatorFunctions = {
-				
+				evaluate_expression: function(){
+					alert(eval(document.getElementById("calculator_expression")))	
+				},
 			}
 			
 			setInterval(function(){
@@ -67,7 +69,7 @@
 			
 			function startCalculator(){
 				calculatorSource = "<input id='calculator_expression' />";
-				calculatorSource += "<button id='calculator_submit' onclick='evaluate_expression()'>=</button>";
+				calculatorSource += "<button id='calculator_submit' onclick='calculatorFunctions.evaluate_expression()'>=</button>";
 				calculatorSource += "<div id='calculator_output'></div>";
 				var calculatorWindow = new Window(calculatorSource, "calculator" + RAM.windowID);
 				RAM.windowID += 1;
