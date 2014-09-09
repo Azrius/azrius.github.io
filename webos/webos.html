@@ -26,7 +26,7 @@
 					m: clock.getMinutes(),
 				}
 				
-				document.getElementById("taskbar").innerHTML = "<p style='position: absolute; left: 95%; top: -1%;'>" + timeValues.h + ": " + timeValues.m + "</p>";
+				document.body.innerHTML = "<p style='position: absolute; left: 95%; top: -1%;'>" + timeValues.h + ": " + timeValues.m + "</p>";
 			}, 500);
 			
 			function Window(contents, title){
@@ -80,13 +80,11 @@
 			
 			$(document).ready(function(){
 				$("body").css("overflow", "hidden");
-				
-				startTerminal();
 			});
 		</script>
 	</head>
 	
 	<body>
-		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"><span id="terminalButton">[t]</span></span></div>
+		<div id="taskbar" style="width: 102%; height: 20px; margin-top: -7px; margin-left: -10px; color: #EDDEC9; background-color: #000000;"><span onclick="startTerminal()" id="terminalButton">[t]</span></span></div>
 	</body>
 </html>
