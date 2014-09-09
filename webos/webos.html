@@ -27,6 +27,10 @@
 			var SSD = {};
 			var terminalCommands = {};
 			
+			var calculatorFunctions = {
+				
+			}
+			
 			setInterval(function(){
 				var clock = new Date();
 				var timeValues = {
@@ -61,10 +65,6 @@
 					RAM.windowID += 1;
 			}
 			
-			function evaluate_expression(){
-				alert(eval(document.getElementById("calculator_expression").value));
-			}
-			
 			function startCalculator(){
 				calculatorSource = "<input id='calculator_expression' />";
 				calculatorSource += "<button id='calculator_submit' onclick='evaluate_expression()'>=</button>";
@@ -87,13 +87,15 @@
 					document.getElementById("output").innerHTML = "";
 				}
 			
-				if(command == "test"){
-					terminalPrint("hello, world");
-				} else {
-					terminalPrint("ERROR[0]: " + command + " - Unknown command.");
+				for(var i = 0; i < terminalCommands.length; i++){
+					if(terminalCommands[i] == "test"){
+						terminalPrint("hello, world");
+						document.getElementById("expression").value = "";
+						return 0;
+					}
 				}
 				
-				document.getElementById("expression").value = "";
+				terminalPrint("ERROR[0]: command not found");
 			}
 			
 			$(document).keypress(function(event){
