@@ -5,15 +5,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     
     <script type="text/coffeescript">
-      
+      edt = -> alert "test"
+      del = -> alert "test2"
     </script>
   </head>
   
   <body style="background-color: ivory;">
     <div id="task-strip" style="color: ivory; background-color: #993399; width: 100%; top-margin: -5px; left-margin -5px;"><h1>Reminder</h1></div>
     
-    <span id="edit" class="glyphicon glyphicon-pencil"></span>
-    <span id="delete" class="glyphicon glyphicon-remove"></span>
+    <span id="edit" onclick="edt()" class="glyphicon glyphicon-pencil"></span>
+    <span id="delete" onclick="del()" class="glyphicon glyphicon-remove"></span>
     
     <div class="well" id="contents"></div>
   </body>
