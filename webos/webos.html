@@ -61,18 +61,20 @@
 			}
 			
 			function startTerminal(){
-				terminalSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
-				terminalSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
-				var terminalWindow = new Window(terminalSource, "terminal" + RAM.windowID);
-				RAM.windowID += 1;
+				if(!document.getElementById("terminal")){
+					terminalSource = "<div id='output' style='width: 500px; height: 180px;'></div>";
+					terminalSource += "<input id='expression' style='font-size: 9px; width: 500px;' />";
+					var terminalWindow = new Window(terminalSource, "terminal" + RAM.windowID);
+				} 
 			}
 			
 			function startCalculator(){
-				calculatorSource = "<input id='calculator_expression' />";
-				calculatorSource += "<button id='calculator_submit' onclick='calculatorFunctions.evaluate_expression()'>=</button>";
-				calculatorSource += "<div id='calculator_output'></div>";
-				var calculatorWindow = new Window(calculatorSource, "calculator" + RAM.windowID);
-				RAM.windowID += 1;
+				if(!document.getElementById("calculator")){
+					calculatorSource = "<input id='calculator_expression' />";
+					calculatorSource += "<button id='calculator_submit' onclick='calculatorFunctions.evaluate_expression()'>=</button>";
+					calculatorSource += "<div id='calculator_output'></div>";
+					var calculatorWindow = new Window(calculatorSource, "calculator" + RAM.windowID);
+				}
 			}
 			
 			function startBrowser(){
