@@ -6,16 +6,19 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     
     <script type="text/coffeescript">
-      $(document).on "click", ->
+      $("#edit").on "click", ->
         alert("test")
+        
+      $("#delete").on "click", ->
+        alert("test2")
     </script>
   </head>
   
   <body style="background-color: ivory;">
     <div id="task-strip" style="color: ivory; background-color: #993399; width: 100%; top-margin: -5px; left-margin -5px;"><h1>Reminder</h1></div>
     
-    <span id="edit" onclick="edt()" class="glyphicon glyphicon-pencil"></span>
-    <span id="delete" onclick="del()" class="glyphicon glyphicon-remove"></span>
+    <span id="edit" class="glyphicon glyphicon-pencil"></span>
+    <span id="delete" class="glyphicon glyphicon-remove"></span>
     
     <div class="well" id="contents"></div>
   </body>
