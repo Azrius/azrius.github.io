@@ -6,11 +6,14 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     
     <script type="text/coffeescript">
+      $(document).ready ->
+        alert "hi" if true
+      
       $("#edit").on "click", ->
-        alert("test")
+        
         
       $("#delete").on "click", ->
-        alert("test2")
+        
     </script>
   </head>
   
