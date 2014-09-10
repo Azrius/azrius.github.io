@@ -7,7 +7,7 @@
     
     <script type="text/coffeescript">
       $(document).ready ->
-        alert "hi" if true
+        localStorage.reminder = "!" if not localStorage.reminder?
       
       $("#edit").on "click", ->
         
