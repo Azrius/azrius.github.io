@@ -8,13 +8,15 @@
     <script type="text/coffeescript">
       $(document).ready ->
         localStorage.reminder = "!" if not localStorage.reminder?
-        $("#contents").append "<p>test</p>"
+        $("#contents").append localStorage.reminder
       
       $("#edit").on "click", ->
         
         
       $("#delete").on "click", ->
-        
+        if confirm()
+          localStorage.reminder = ""
+          window.location = window.location
     </script>
   </head>
   
