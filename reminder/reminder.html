@@ -11,12 +11,15 @@
         $("#contents").append localStorage.reminder
       
       $("#edit").on "click", ->
-        
+        data = prompt("") + "<br />"
+        localStorage.reminder += data
+        $("#contents").append data
         
       $("#delete").on "click", ->
-        if confirm()
+        if confirm("Are you sure you want to clear your list?")
           localStorage.reminder = ""
-          window.location = window.location
+          document.getElementById("contents").innerHTML = localStorage.reminder
+          
     </script>
   </head>
   
