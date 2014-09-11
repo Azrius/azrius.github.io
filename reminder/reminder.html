@@ -8,7 +8,7 @@
     <script type="text/coffeescript">
       $(document).ready ->
         localStorage.reminder = "!" if not localStorage.reminder?
-        document.getElementById "contents".innerHTML = localStorage.reminder;
+        $("#contents").append "<p>test</p>"
       
       $("#edit").on "click", ->
         
