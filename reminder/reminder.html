@@ -11,8 +11,9 @@
         $("#contents").append localStorage.reminder
       
       $("#edit").on "click", ->
-        data = prompt("") + "<br />"
-        localStorage.reminder += data
+        data = prompt("")
+        divId = Math.random()
+        localStorage.reminder += "<div id='"+ divId +"'>" + data + "</div>";
         $("#contents").append data
         
       $("#delete").on "click", ->
