@@ -12,9 +12,9 @@
       
       $("#edit").on "click", ->
         data = prompt("")
-        divId = Math.random()
+        divId = 2
         localStorage.reminder += "<div id='"+ divId +"'>" + data + "</div>";
-        $("#contents").append data
+        $("#contents").append localStorage
         
       $("#delete").on "click", ->
         if confirm("Are you sure you want to clear your list?")
