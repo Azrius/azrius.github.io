@@ -12,7 +12,7 @@
       
       $("#edit").on "click", ->
         data = prompt("")
-        divId = 2
+        divId = Math.random()
         localStorage.reminder += "<div id='" + divId + "'>" + data + "</div>";
         document.getElementById("contents").innerHTML += localStorage.reminder
         
