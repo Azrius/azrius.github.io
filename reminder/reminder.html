@@ -13,7 +13,7 @@
       $("#edit").on "click", ->
         data = prompt("")
         divId = 2
-        localStorage.reminder += "<div id='"+ divId +"'>" + data + "</div>";
+        localStorage.reminder += "<div>" + data + "</div>";
         $("#contents").append localStorage
         
       $("#delete").on "click", ->
