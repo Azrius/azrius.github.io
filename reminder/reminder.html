@@ -14,7 +14,7 @@
         data = prompt("")
         divId = 2
         localStorage.reminder += "<div>" + data + "</div>";
-        $("#contents").append localStorage
+        $("#contents").append localStorage.reminder
         
       $("#delete").on "click", ->
         if confirm("Are you sure you want to clear your list?")
