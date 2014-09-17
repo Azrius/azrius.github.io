@@ -14,7 +14,7 @@
         data = prompt("")
         divId = Math.random()
         localStorage.reminder += "<div id='rem" + divId + "'>" + data + "</div>";
-        localStorage.reminder += "<button onclick='$(\"#rem\" + divId).remove()'>delete</button>";
+        //localStorage.reminder += "<button onclick='$(\"#rem\" + divId).remove()'>delete</button>";
         document.getElementById("contents").innerHTML += localStorage.reminder;
         
       $("#delete").on "click", ->
